@@ -1627,7 +1627,9 @@ div.col-md-7 {
   div.col-md-7.order-2.order-md-1 {
     width: 80%;
   }
-
+  div.col-md-5.order-1.order-md-2_ {
+    width: 41.66666667%;
+  }
   div.col-md-5 {
     width: 41.66666667%;
   }
