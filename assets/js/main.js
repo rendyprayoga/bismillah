@@ -120,24 +120,24 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Init swiper slider with 1 slide at once in desktop view
    */
-  new Swiper(".slides-1", {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 3,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  // new Swiper(".slides-1", {
+  //   speed: 600,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false,
+  //   },
+  //   slidesPerView: 3,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     type: "bullets",
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  // });
 
   /**
    * Animation on scroll function and init
@@ -162,8 +162,8 @@ function active_course() {
       // items: 3,
       slidesPerView: 3,
       nav: true,
-      // autoplay: 2500,
-      // smartSpeed: 1500,
+      autoplay: 2500,
+      smartSpeed: 1500,
       dots: false,
       responsiveClass: true,
       thumbs: true,
@@ -180,15 +180,21 @@ function active_course() {
       responsive: {
         0: {
           items: 1,
-          margin: 0,
+          margin: 30,
         },
         991: {
           items: 2,
           margin: 30,
         },
         1200: {
-          items: 3,
+          items: 3.3,
           margin: 40,
+        },
+        575: {
+          items: 2,
+        },
+        414: {
+          items: 1,
         },
       },
     });
