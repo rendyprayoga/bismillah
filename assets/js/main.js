@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 5000,
       disableOnInteraction: false,
     },
-    slidesPerView: "auto",
+    slidesPerView: 3,
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
@@ -154,32 +154,44 @@ document.addEventListener("DOMContentLoaded", () => {
     aos_init();
   });
 });
-jQuery(document).ready(function ($) {
-  "use strict";
-  $("#customers-testimonials").owlCarousel({
-    loop: true,
-    center: true,
-    items: 3,
-    margin: 30,
-    autoplay: true,
-    dots: true,
-    nav: true,
-    autoplayTimeout: 8500,
-    smartSpeed: 450,
-    navText: [
-      '<i class="fa fa-angle-left"></i>',
-      '<i class="fa fa-angle-right"></i>',
-    ],
-    responsive: {
-      0: {
-        items: 1,
+function active_course() {
+  if ($(".active_course").length) {
+    $(".active_course").owlCarousel({
+      loop: true,
+      margin: 20,
+      // items: 3,
+      slidesPerView: 3,
+      nav: true,
+      // autoplay: 2500,
+      // smartSpeed: 1500,
+      dots: false,
+      responsiveClass: true,
+      thumbs: true,
+      thumbsPrerendered: true,
+
+      navText: [
+        "<img src='/assets/img/prev.svg'>",
+        "<img src='/assets/img/next.svg'>",
+      ],
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0,
+        },
+        991: {
+          items: 2,
+          margin: 30,
+        },
+        1200: {
+          items: 3,
+          margin: 40,
+        },
       },
-      768: {
-        items: 2,
-      },
-      1170: {
-        items: 3,
-      },
-    },
-  });
-});
+    });
+  }
+}
+active_course();
